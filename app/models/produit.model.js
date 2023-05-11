@@ -2,8 +2,8 @@
 // importation de mongoose
 const mongoose = require('mongoose');
 // déclaration de schema
-const schema = mongoose.Schema();
-const ProduitSchema = new schema(
+const Schema = mongoose.Schema;
+let ProduitSchema = new Schema(
     {
         titre: { type: String, required: true },
         description: String,

@@ -16,6 +16,8 @@ app.use(bodyParser.json());
 app.get('/',(req,res)=>{
     res.send('Hello world');
 })
+// importation des routage
+require('./app/routes/produit.route')(app);
 // écoute du serveur
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);

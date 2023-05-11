@@ -10,6 +10,17 @@ exports.createProduit= (req,res) => {
     ).catch((err) => {
         res.send(err.message);
     });
-    
 
+
+}
+
+exports.getAllProduit= (req,res) => {
+    Produit.find().then((data)=>{
+        res.send(data);
+
+    }
+
+    ).catch((err) => {
+        res.send(err.message);
+    });
 }
